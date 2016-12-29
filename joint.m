@@ -9,6 +9,7 @@ function output = joint(X,arities)
 %if the joint variable is only compared with variables using the same samples,
 %then arity information is not required
 
+if (nargin == 1), arities=0; end %dawnsong, 20161229
 if (~isa(X,'double') || ~isa(arities,'double'))
   error('Error, inputs must be double vectors or matrices')
 end
